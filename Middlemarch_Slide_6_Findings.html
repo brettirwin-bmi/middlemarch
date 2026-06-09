@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Middlemarch — How findings are delivered</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --navy: #1B2A4A; --white: #FFFFFF; --rule: rgba(255,255,255,0.15); }
+        body {
+            background: #0d0d0d;
+            font-family: 'Spectral', serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 40px;
+        }
+        .slide {
+            width: 1120px;
+            height: 630px;
+            background: var(--navy);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 44px 160px 44px 160px;
+            box-shadow: 0 32px 80px rgba(0,0,0,0.6);
+            gap: 28px;
+        }
+        .section-title {
+            position: relative;
+            left: -40px;
+            font-size: 40px;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: none;
+            color: var(--white);
+            opacity: 1;
+            margin-bottom: 0;
+            padding-bottom: 16px;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            text-align: left;
+            display: block;
+            width: calc(100% + 40px);
+        }
+        .row {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .label-trad {
+            position: relative;
+            left: -40px;
+            font-size: 22px;
+            font-weight: 600;
+            letter-spacing: 0.16em;
+            text-transform: none;
+            color: var(--white);
+            opacity: 0.4;
+            white-space: nowrap;
+            width: 160px;
+            flex-shrink: 0;
+        }
+        .label-mm {
+            position: relative;
+            left: -40px;
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: none;
+            color: var(--white);
+            opacity: 0.9;
+            white-space: nowrap;
+            width: 160px;
+            flex-shrink: 0;
+        }
+        .sentence-trad {
+            font-size: 24px;
+            font-weight: 400;
+            color: var(--white);
+            opacity: 0.45;
+            line-height: 1.55;
+        }
+        .sentence-mm {
+            font-size: 30px;
+            font-weight: 500;
+            color: var(--white);
+            opacity: 0.95;
+            line-height: 1.4;
+        }
+        .footer {
+            position: absolute;
+            bottom: 24px;
+            left: 44px;
+            right: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid var(--rule);
+            padding-top: 16px;
+        }
+        .footer-brand {
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--white);
+            opacity: 0.3;
+        }
+        .footer-number {
+            font-size: 10px;
+            color: var(--white);
+            opacity: 0.3;
+            letter-spacing: 0.06em;
+        }
+    </style>
+</head>
+<body>
+<div class="slide">
+
+    <div class="section-title">How findings are delivered</div>
+
+    <div class="row">
+        <span class="label-trad">Traditional 360</span>
+        <span class="sentence-trad">A dense 30-page report of bar charts and sanitized language lands in the leader's inbox. Signal and noise have not been separated.</span>
+    </div>
+
+    <div class="row">
+        <span class="label-mm">Middlemarch 360</span>
+        <span class="sentence-mm">Storytelling that is specific, behavioral, human. The leader receives a compelling, concise narrative rather than a bloodless corporate report. The insights become sticky.</span>
+    </div>
+
+    <div class="footer">
+        <div class="footer-brand">Middlemarch Leadership</div>
+        <div class="footer-number">6 / 9</div>
+    </div>
+
+</div>
+</body>
+</html>

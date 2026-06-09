@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Middlemarch — Slide 2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --navy: #1B2A4A; --white: #FFFFFF; --rule: rgba(255,255,255,0.15); }
+        body { background: #0d0d0d; font-family: 'Spectral', serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 40px; }
+        .slide {
+            width: 1120px;
+            height: 630px;
+            background: var(--navy);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 56px 72px;
+            box-shadow: 0 32px 80px rgba(0,0,0,0.6);
+        }
+        .contact-logo {
+            height: 80px;
+            width: auto;
+            opacity: 0.95;
+            margin-bottom: 32px;
+            display: block;
+        }
+
+        .contact-email { font-size: 22px; font-weight: 400; color: var(--white); opacity: 0.9; letter-spacing: 0.02em; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 2px; }
+        .footer { position: absolute; bottom: 24px; left: 44px; right: 44px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--rule); padding-top: 16px; }
+        .footer-brand { font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--white); opacity: 0.3; }
+        .footer-number { font-size: 10px; color: var(--white); opacity: 0.3; letter-spacing: 0.06em; }
+
+        .slide-5-body {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 40px;
+            padding: 20px 0 24px;
+            align-items: start;
+        }
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            border-left: 1px solid rgba(255,255,255,0.15);
+            padding-left: 20px;
+        }
+        .col-label {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--white);
+            opacity: 1;
+            line-height: 1.4;
+            min-height: 68px;
+        }
+        .col-body {
+            font-size: 19px;
+            font-weight: 400;
+            color: var(--white);
+            opacity: 0.85;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="slide-5-body">
+            <div class="column">
+                <div class="col-label">About</div>
+                <div class="col-body">Middlemarch is an executive search and leadership advisory firm. The name comes from George Eliot's novel about people striving to do consequential things in complicated circumstances.</div>
+            </div>
+            <div class="column">
+                <div class="col-label">Executive Search</div>
+                <div class="col-body">The search for the right leader is not a commodity, it is a craft. It requires judgment that cannot be automated or rushed. We work quietly on a limited number of engagements.</div>
+            </div>
+            <div class="column" id="la-column">
+                <div class="col-label">Leadership Assessment</div>
+                <div class="col-body">By assessing a leader from every direction, a 360 assessment identifies the gap between intention and impact, and gives organizations the information they need to close it.</div>
+            </div>
+            <div class="column">
+                <div class="col-label">Executive Coaching</div>
+                <div class="col-body">Leadership is not a fixed trait. Coaching helps leaders see themselves clearly and adapt deliberately. We also train executives to leverage AI as a strategic thinking partner, not just a productivity tool.</div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-brand">Middlemarch Leadership</div>
+            <div class="footer-number">2 / 9</div>
+        </div>
+    </div>
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                var cols = document.querySelectorAll('.column');
+                var maxH = 0;
+                cols.forEach(function(c) { if (c.offsetHeight > maxH) maxH = c.offsetHeight; });
+                var la = document.getElementById('la-column');
+                if (la) la.style.height = maxH + 'px';
+            }, 50);
+        });
+    </script>
+</body>
+</html>
